@@ -19,7 +19,7 @@ def prueba():
     while True:
         respuesta = input("Ingresa (1) o (2) ")
         try:
-            respuesta = float(respuesta)
+            respuesta = int(respuesta)
         except ValueError:
             print("Oops, eso no era un numero")
         if respuesta == 1 or respuesta == 2:
