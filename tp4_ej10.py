@@ -16,10 +16,6 @@ def factores_primos(numero):
             i = i + 1
     return tuple(factor_primo)    
         
-
-
-
-
 def prueba():
     
     while True:
