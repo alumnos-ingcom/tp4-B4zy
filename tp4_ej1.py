@@ -19,6 +19,7 @@ def ingreso_entero(mensaje):
         raise IngresoIncorrecto(f"[{ingreso}] No era un número'") from err
     return entero
 
+
 def ingreso_entero_reintento(mensaje, cantidad_reintentos=5):
     while cantidad_reintentos != 0:
         try:
