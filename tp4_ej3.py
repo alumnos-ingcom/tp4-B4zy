@@ -49,4 +49,5 @@ def prueba():
         conversion = convertir_a_centigrados(fahrrenheit)
         print(f"La conversion a centigrados da {conversion} grados")
     
-prueba()
+if __name__ == "__main__":
+    prueba()
