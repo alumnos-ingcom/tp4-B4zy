@@ -29,4 +29,5 @@ def prueba():
     mostrar = factores_primos(numero_ingresado)
     print(f"Los factores primos de {numero_ingresado} son: {mostrar}")
     
-prueba()
+if __name__ == "__main__":
+    prueba()
