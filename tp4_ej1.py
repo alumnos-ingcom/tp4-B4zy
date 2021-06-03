@@ -26,7 +26,7 @@ def ingreso_entero_reintento(mensaje, cantidad_reintentos=5):
             break
         except IngresoIncorrecto:
             cantidad_reintentos = cantidad_reintentos - 1
-            print(f"Oops, eso no era un numero quedan: [{cantidad_reintentos}] intentos")
+            print(f"Oops, eso no era un numero quedan: [{cantidad_reintentos}] intentos")    
     return entero
     raise IngresoIncorrecto("Ya no hay mas reintentos")
 
@@ -45,4 +45,5 @@ def prueba():
     mostrar_3 = ingreso_entero_restringido("Ingrese un numero entre 2 valores [0 - 10]")
     print("Ingresaste un ", mostrar_3)
  
-prueba()
+if __name__ == "__main__":
+    prueba()
