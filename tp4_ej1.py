@@ -23,22 +23,26 @@ def ingreso_entero_reintento(mensaje, cantidad_reintentos=5):
     while cantidad_reintentos != 0:
         try:
             entero = ingreso_entero(mensaje)
-            entero = int(entero)
             break
         except IngresoIncorrecto:
             cantidad_reintentos = cantidad_reintentos - 1
             print(f"Oops, eso no era un numero quedan: [{cantidad_reintentos}] intentos")
-        if cantidad_reintentos == 0:
             raise IngresoIncorrecto("Ya no hay mas reintentos")
+    return entero
 
 def ingreso_entero_restringido(mensaje,valor_minimo=0, valor_maximo=10):
     entero= ingreso_entero(mensaje)
     if (entero < valor_minimo) or (entero > valor_maximo):
+        print("hola2")
         raise IngresoIncorrecto("El numero ingresado no pertenece al rango")
+    return entero
          
 def prueba():
-    print(ingreso_entero("Ingrese un numero: "))
-    print(ingreso_entero_reintento("Ingrese un numero nuevamente:"))
-    print(ingreso_entero_restringido("Ingrese un numero entre 2 valores [0 - 10]"))
+    mostrar_1 = ingreso_entero("Ingrese un numero: ")
+    print("El numero que ingresaste es: ", mostrar_1)
+    mostrar_2 = ingreso_entero_reintento("Ingrese un numero nuevamente: ")
+    print("El numero que ingresaste es: ", mostrar_2)
+    mostrar_3 = ingreso_entero_restringido("Ingrese un numero entre 2 valores [0 - 10]")
+    print("Ingresaste un ", mostrar_3)
  
 prueba()
