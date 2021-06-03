@@ -33,7 +33,8 @@ def prueba():
     mostrar = compara(primer_numero, segundo_numero)
     print(mostrar)
     
-prueba()            
+if __name__ == "__main__":
+    prueba()           
             
             
             
