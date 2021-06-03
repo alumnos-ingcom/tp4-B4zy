@@ -21,4 +21,5 @@ def prueba():
     else:
         print(f"[{mostrar}] No es palíndromo")
         
-prueba()
+if __name__ == "__main__":
+    prueba()
