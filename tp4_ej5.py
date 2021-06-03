@@ -31,4 +31,5 @@ def prueba():
     else:
         print("El numero es positivo")
         
-prueba()
+if __name__ == "__main__":
+    prueba()
