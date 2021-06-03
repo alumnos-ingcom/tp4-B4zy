@@ -26,9 +26,10 @@ def ingreso_entero_reintento(mensaje, cantidad_reintentos=5):
             break
         except IngresoIncorrecto:
             cantidad_reintentos = cantidad_reintentos - 1
-            print(f"Oops, eso no era un numero quedan: [{cantidad_reintentos}] intentos")    
+            print(f"Oops, eso no era un numero quedan: [{cantidad_reintentos}] intentos")
+        raise IngresoIncorrecto("Ya no hay mas reintentos")
     return entero
-    raise IngresoIncorrecto("Ya no hay mas reintentos")
+    
 
 def ingreso_entero_restringido(mensaje,valor_minimo=0, valor_maximo=10):
     entero= ingreso_entero(mensaje)
