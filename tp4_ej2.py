@@ -5,7 +5,8 @@
 ################
 
 def suma_lenta(numero, otro_numero):
-    resultado = numero + otro_numero
+    numeros = [numero, otro_numero]
+    resultado = sum(numeros)
     if (resultado < 0) or (numero > 0 and otro_numero < 0):
         if (numero < 0 and otro_numero > 0):
             while numero != resultado:
@@ -25,4 +26,5 @@ def prueba():
     resultado = suma_lenta(primer_numero, segundo_numero)
     print (f"El resultado es {resultado}")
 
-prueba()
+if __name__ == "__main__":
+    prueba()
